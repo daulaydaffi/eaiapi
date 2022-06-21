@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendapatanController;
+use App\Http\Controllers\LayananController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,3 +24,9 @@ Route::post('pendapatan', [PendapatanController::class,'create']);
 Route::get('/pendapatan/{no_resi}', [PendapatanController::class, 'select']);
 Route::put('/pendapatan/{no_resi}', [PendapatanController::class, 'update']);
 Route::delete('/pendapatan/{no_resi}', [PendapatanController::class, 'delete']);
+
+Route::get('layanan', [LayananController::class,'index']);
+Route::post('layanan', [LayananController::class,'create']);
+Route::get('/layanan/{id_layanan}', [LayananController::class, 'select']);
+Route::put('/layanan/{id_layanan}', [LayananController::class, 'update']);
+Route::delete('/layanan/{id_layanan}', [LayananController::class, 'delete']);
