@@ -14,7 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->id();
+            $table->string('id_customer');
+            $table->string('nama_pengirim');
+            $table->string('jenis_barang');
+            $table->string('alamat_pengirim');
+            $table->string('nohp_pengirim');
+            $table->string('jenis_layanan');
             $table->timestamps();
         });
     }

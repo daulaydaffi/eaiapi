@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendapatanController;
 use App\Http\Controllers\StatuspaketController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PengirimanController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,3 +41,21 @@ Route::post('layanan', [LayananController::class,'create']);
 Route::get('/layanan/{id_layanan}', [LayananController::class, 'select']);
 Route::put('/layanan/{id_layanan}', [LayananController::class, 'update']);
 Route::delete('/layanan/{id_layanan}', [LayananController::class, 'delete']);
+
+Route::get('pengiriman', [PengirimanController::class,'index']);
+Route::post('pengiriman', [PengirimanController::class,'create']);
+Route::get('/pengiriman/{id_order}', [PengirimanController::class, 'select']);
+Route::put('/pengiriman/{id_order}', [PengirimanController::class, 'update']);
+Route::delete('/pengiriman/{id_order}', [PengirimanController::class, 'delete']);
+
+Route::get('customer', [CustomerController::class,'index']);
+Route::post('customer', [CustomerController::class,'create']);
+Route::get('/customer/{id_customer}', [CustomerController::class, 'select']);
+Route::put('/customer/{id_customer}', [CustomerController::class, 'update']);
+Route::delete('/customer/{id_customer}', [CustomerController::class, 'delete']);
+
+Route::get('transaksi', [TransaksiController::class,'index']);
+Route::post('transaksi', [TransaksiController::class,'create']);
+Route::get('/transaksi/{id_order}', [TransaksiController::class, 'select']);
+Route::put('/transaksi/{id_order}', [TransaksiController::class, 'update']);
+Route::delete('/transaksi/{id_order}', [TransaksiController::class, 'delete']);

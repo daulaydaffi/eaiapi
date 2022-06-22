@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('transaksis', function (Blueprint $table) {
-            $table->id();
+            $table->string('id_order');
+            $table->string('jenis_layanan');
+            $table->string('jenis_barang');
+            $table->string('berat_barang');
+            $table->string('total_harga');
             $table->timestamps();
         });
     }
