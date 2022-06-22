@@ -3,7 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendapatanController;
+<<<<<<< HEAD
 use App\Http\Controllers\StatuspaketController;
+=======
+use App\Http\Controllers\LayananController;
+>>>>>>> d3686dedc92818009b3554baf80db46286782144
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,8 +29,16 @@ Route::get('/pendapatan/{no_resi}', [PendapatanController::class, 'select']);
 Route::put('/pendapatan/{no_resi}', [PendapatanController::class, 'update']);
 Route::delete('/pendapatan/{no_resi}', [PendapatanController::class, 'delete']);
 
+<<<<<<< HEAD
 Route::get('statuspaket', [StatuspaketController::class,'index']);
 Route::post('statuspaket', [StatuspaketController::class,'create']);
 Route::get('/statuspaket/{no_resi}', [StatuspaketController::class, 'select']);
 Route::put('/statuspaket/{no_resi}', [StatuspaketController::class, 'update']);
 Route::delete('/statuspaket/{no_resi}', [StatuspaketController::class, 'delete']);
+=======
+Route::get('layanan', [LayananController::class,'index']);
+Route::post('layanan', [LayananController::class,'create']);
+Route::get('/layanan/{id_layanan}', [LayananController::class, 'select']);
+Route::put('/layanan/{id_layanan}', [LayananController::class, 'update']);
+Route::delete('/layanan/{id_layanan}', [LayananController::class, 'delete']);
+>>>>>>> d3686dedc92818009b3554baf80db46286782144
