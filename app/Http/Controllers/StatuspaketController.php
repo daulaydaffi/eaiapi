@@ -20,7 +20,7 @@ class StatuspaketController extends Controller
     public function create(request $request) {
         $statuspaket = new statuspaket;
         $statuspaket->no_resi = $request->no_resi;
-        $statuspaket->tanggal_pengiriman = $request->tanggal_pengiriman;
+        $statuspaket->tanggal_penerimaan = $request->tanggal_penerimaan;
         $statuspaket->jenis_barang = $request->jenis_barang;
         $statuspaket->berat_barang = $request->berat_barang;
         $statuspaket->status_paket = $request->status_paket;
@@ -31,13 +31,13 @@ class StatuspaketController extends Controller
 
     //UPDATE
     public function update(request $request, $no_resi) {
-        $statuspaket->tanggal_pengiriman = $request->tanggal_pengiriman;
+        $statuspaket->tanggal_penerimaan = $request->tanggal_penerimaan;
         $statuspaket->jenis_barang = $request->jenis_barang;
         $statuspaket->berat_barang = $request->berat_barang;
         $statuspaket->status_paket = $request->status_paket;
 
         $statuspaket = statuspaket::find($no_resi);
-        $statuspaket->tanggal_pengiriman = $request->tanggal_pengiriman;
+        $statuspaket->tanggal_penerimaan = $request->tanggal_penerimaan;
         $statuspaket->jenis_barang = $request->jenis_barang;
         $statuspaket->berat_barang = $request->berat_barang;
         $statuspaket->status_paket = $request->status_paket;
