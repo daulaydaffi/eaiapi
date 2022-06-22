@@ -14,7 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('statuspakets', function (Blueprint $table) {
-            $table->id();
+            $table->string("no_resi");
+            $table->date("tanggal_penerimaan");
+            $table->string("jenis_barang");
+            $table->string("berat_barang");
+            $table->string("status_paket");
             $table->timestamps();
         });
     }
