@@ -5,7 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendapatanController;
 use App\Http\Controllers\StatuspaketController;
 use App\Http\Controllers\LayananController;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0046e2012086759580ff34107de8f36a471a8c7c
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -37,4 +40,8 @@ Route::get('layanan', [LayananController::class,'index']);
 Route::post('layanan', [LayananController::class,'create']);
 Route::get('/layanan/{id_layanan}', [LayananController::class, 'select']);
 Route::put('/layanan/{id_layanan}', [LayananController::class, 'update']);
+<<<<<<< HEAD
 Route::delete('/layanan/{id_layanan}', [LayananController::class, 'delete']);
+=======
+Route::delete('/layanan/{id_layanan}', [LayananController::class, 'delete']);
+>>>>>>> 0046e2012086759580ff34107de8f36a471a8c7c
